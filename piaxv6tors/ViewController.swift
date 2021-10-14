@@ -29,7 +29,17 @@ class ViewController: UIViewController {
         let siffra1 = Int(number1Textfield.text!)
         let siffra2 = Int(number2Textfield.text!)
         
-        
+        if(siffra1 == nil)
+        {
+            resultLabel.text = "Siffra 1 fel"
+            return
+        }
+        if(siffra2 == nil)
+        {
+            resultLabel.text = "Siffra 2 fel"
+            return
+        }
+
         
         var theresult = siffra1! + siffra2!
         
@@ -39,15 +49,54 @@ class ViewController: UIViewController {
     
     @IBAction func doMinus(_ sender: Any) {
         
-        resultLabel.text = "hopp"
+        if let nummer1 = Int(number1Textfield.text!) {
+            
+            if let nummer2 = Int(number2Textfield.text!) {
+                var theresult = nummer1 - nummer2
+                
+                resultLabel.text = String(theresult)
+            }
+        }
     }
     
     
     @IBAction func doMulti(_ sender: Any) {
         
+        guard let nummer1 = Int(number1Textfield.text!) else {
+            resultLabel.text = "Fel i siffra 1"
+            return
+        }
+        guard let nummer2 = Int(number2Textfield.text!) else {
+            resultLabel.text = "Fel i siffra 2"
+            return
+        }
+
+        var theresult = nummer1 * nummer2
+        
+        resultLabel.text = String(theresult)
+        
     }
     
     @IBAction func doDiv(_ sender: Any) {
+        
+        guard let nummer1 = Int(number1Textfield.text!) else {
+            resultLabel.text = "Fel i siffra 1"
+            return
+        }
+        guard let nummer2 = Int(number2Textfield.text!) else {
+            resultLabel.text = "Fel i siffra 2"
+            return
+        }
+        
+        if(nummer2 == 0)
+        {
+            resultLabel.text = "Inte dela med noll"
+            return
+        }
+        
+        var theresult = Double(nummer1) / Double(nummer2)
+        
+        resultLabel.text = String(theresult)
         
     }
     
