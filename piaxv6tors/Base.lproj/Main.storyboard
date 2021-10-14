@@ -87,6 +87,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nks-Vf-d2R">
+                                <rect key="frame" x="157" y="772" width="100" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GNe-xp-W72"/>
+                                    <constraint firstAttribute="width" constant="100" id="SEK-Iy-50N"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Nollställ"/>
+                                <connections>
+                                    <action selector="resetResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t9y-e8-J77"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -104,7 +116,9 @@
                             <constraint firstItem="aGW-07-Iwc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="cjt-5m-ZWA"/>
                             <constraint firstItem="93E-XK-Tff" firstAttribute="top" secondItem="qw1-zU-3F8" secondAttribute="bottom" constant="20" id="fIc-FP-K27"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TIK-9q-pz9" secondAttribute="trailing" constant="10" id="g02-dO-feX"/>
+                            <constraint firstItem="nks-Vf-d2R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kZL-Zu-zDP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mv6-xF-6Fw" secondAttribute="trailing" id="r5P-AE-146"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nks-Vf-d2R" secondAttribute="bottom" constant="30" id="wQO-16-2gC"/>
                             <constraint firstItem="aGW-07-Iwc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="zdo-3d-PLe"/>
                         </constraints>
                     </view>
